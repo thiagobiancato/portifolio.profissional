@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfólio Profissional</title>
+<style>
+
+/* ===== RESET BÁSICO ===== */
+
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    margin:0;
+    background:#f5f7fa;
+    color:#1e293b;
+    line-height:1.6;
+}
+
+/* ===== HEADER ===== */
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    opacity:.9;
+}
+
+/* ===== SECTIONS ===== */
+
+section{
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+/* ===== TITLES ===== */
+
+h2{
+    border-left:6px solid #2563eb;
+    padding-left:12px;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+/* ===== CARDS ===== */
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 32px rgba(0,0,0,.15);
+}
+
+/* ===== GRID ===== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.footer-pro{
+    background:#0f172a;
+    color:#e5e7eb;
+    padding:60px 20px 30px;
+    margin-top:80px;
+}
+
+.footer-content{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-pro h4{
+    margin-bottom:15px;
+    color:#fff;
+}
+
+.footer-pro p{
+    margin:6px 0;
+    font-size:14px;
+    opacity:0.85;
+}
+
+.footer-pro a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.footer-pro a:hover{
+    text-decoration:underline;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    font-size:13px;
+    opacity:0.6;
+}
+
+/* ===== CTA ===== */
+
+.cta{
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:600px;
+    margin:0 auto 15px;
+}
+
+/* ===== BOTÕES CTA PADRÃO ===== */
+
+.btn{
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-block;
+    border:2px solid #fff;
+    color:#fff;
+    background:transparent;
+    transition:0.25s ease;
+}
+
+/* HOVER = único efeito */
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Remove estados padrão navegador */
+
+.btn:visited,
+.btn:active,
+.btn:focus{
+    color:#fff;
+    background:transparent;
+    outline:none;
+}
+
+/* REMOVE HIGHLIGHT DO NAVEGADOR */
+
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+/* ===== HERO PROFISSIONAL ===== */
+
+.hero{
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.hero .subtitle{
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:25px;
+    opacity:0.95;
+}
+
+.hero .description{
+    max-width:700px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:1.7;
+    opacity:0.85;
+}
+/* ===== CASES CORPORATIVOS ===== */
+
+.case{
+    background:#fff;
+    border-radius:16px;
+    padding:40px;
+    margin-bottom:50px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.case:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
+.case h3{
+    font-size:26px;
+    margin-bottom:30px;
+    color:#1e293b;
+}
+
+.case-block{
+    margin-bottom:25px;
+    padding-left:20px;
+    border-left:4px solid #2563eb;
+}
+
+.case-block h4{
+    font-size:18px;
+    margin-bottom:8px;
+    color:#1e3a8a;
+}
+
+.case-block p{
+    margin:0;
+    line-height:1.7;
+}
+
+.case-block ul{
+    margin:0;
+    padding-left:18px;
+}
+
+.case-block li{
+    margin-bottom:6px;
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="hero">
+
+  <h1>Thiago Biancato</h1>
+
+  <p class="subtitle">
+    Especialista em Otimização de Processos, Automação Operacional e Gestão de Projetos
+  </p>
+
+  <p class="description">
+    Ajudo empresas a eliminar retrabalho, organizar fluxos e transformar operações manuais em processos eficientes, rastreáveis e escaláveis.
+  </p>
+
+</header>
+
+
+<section>
+<h2>Sobre Mim</h2>
+<div class="card">
+<p>
+Sou especialista em organização e melhoria de processos operacionais, atuando na estruturação, padronização e automação de rotinas administrativas e empresariais.
+<br>
+Ao longo da minha experiência, liderei projetos de transformação de processos, desde o mapeamento e análise até a implementação de soluções que reduziram retrabalho, aumentaram a eficiência e trouxeram maior controle operacional.
+<br>
+Meu foco é sempre compreender a realidade do cliente e desenvolver soluções práticas, simples de utilizar e que gerem impacto direto no dia a dia da operação.</p>
+<br>
+
+<h4>Diferencial</h4>
+<p>Diferente de soluções genéricas, meu trabalho parte do entendimento real do processo e da rotina operacional.
+<br>
+Não entrego apenas ferramentas ou planilhas: entrego soluções estruturadas que resolvem problemas reais, melhoram a organização e aumentam a produtividade.</p>
+
+<h4>Foco de Atuação</h4>
+<ul>
+<li>Planilhas inteligentes e automações em Excel</li>
+<li>Mapeamento e padronização de processos</li>
+<li>Estruturação de controles operacionais</li>
+<li>Otimização de rotinas administrativas</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Serviços</h2>
+<div class="grid">
+<div class="card"><h3>Mapeamento de Processos</h3><p>Estruturo e organizo processos operacionais, identificando falhas, gargalos e oportunidades de melhoria.
+<br>
+Através do mapeamento e padronização das atividades, ajudo empresas a reduzir retrabalho, aumentar a clareza das responsabilidades e melhorar a eficiência do fluxo de trabalho.</p></div>
+<div class="card"><h3>Automação Operacional</h3><p>Transformo rotinas manuais e repetitivas em soluções automatizadas, reduzindo erros, economizando tempo e trazendo maior confiabilidade para as operações administrativas.</p></div>
+<div class="card"><h3>Gestão de Projetos</h3><p>Organizo e acompanho projetos do planejamento à execução, garantindo controle, clareza das etapas e entrega dentro do prazo.</p></div>
+<div class="card"><h3>Planilhas inteligentes</h3><p>Desenvolvo planilhas personalizadas que organizam dados, automatizam cálculos e facilitam a gestão de controles financeiros, operacionais e administrativos.</p></div>
+</div>
+</section>
+
+<section class="highlight">
+  <p>
+    Atuação prática em projetos reais de melhoria de processos, automação operacional e implantação de soluções que reduziram retrabalho, aumentaram a eficiência e trouxeram maior controle para operações empresariais.
+  </p>
+</section>
+
+<section>
+<h2>Cases</h2>
+<div class="case">
+  <h3>Como organizei e padronizei um processo crítico de cadastro de terceiros, eliminando retrabalho e aumentando a clareza operacional</h3>
+  <div class="case-block">
+    <h4>Desafio</h4>
+    <p>
+      Um setor administrativo possuía atividades realizadas de forma desorganizada, sem padronização e sem clareza das etapas do processo.<br>
+Isso gerava retrabalho, dúvidas operacionais e perda de tempo na execução das rotinas.
+    </p>
+  </div>
+  <div class="case-block">
+    <h4>Solução</h4>
+    <p>
+      Foi realizado no Bizagi o mapeamento completo do processo, identificando todas as etapas, responsáveis e pontos de melhoria.</p>
+<br>
+
+<p>O trabalho incluiu:</p>
+<ul>
+<li>Levantamento das atividades existentes</li>
+<li>Estruturação do fluxo operacional</li>
+<li>Criação de fluxograma visual do processo</li>
+<li>Identificação de gargalos e retrabalhos</li>
+<li>Organização lógica das etapas de execução</li>
+</ul>
+
+  </div>
+  <div class="case-block">
+    <h4>Resultados</h4>
+    <ul>
+<li>Maior clareza das responsabilidades do processo</li>
+<li>Redução de dúvidas operacionais</li>
+<li>Padronização das rotinas administrativas</li>
+<li>Melhoria na organização do fluxo de trabalho</li>
+<li>Facilidade para treinamento de novos colaboradores</li>
+</ul>
+
+  </div>
+</div>
+
+
+<div class="case">
+
+  <h3>Como automatizei a criação de orçamentos complexos, reduzindo tempo operacional e eliminando erros manuais</h3>
+
+  <div class="case-block">
+    <h4>Desafio</h4>
+    <p>
+      Um cliente precisava organizar o controle financeiro de sua rotina, pois realizava todos os registros manualmente e enfrentava dificuldades para acompanhar gastos, entradas e saldo mensal.
+    </p>
+  </div>
+
+  <div class="case-block">
+    <h4>Solução</h4>
+    <p>
+      Criada planilha Excel e criada mala direta com Word com cálculos automáticos e geração instantânea de documentos.
+    </p>
+  </div>
+
+  <div class="case-block">
+    <h4>Resultados</h4>
+    <ul>
+      <li>Maior organização financeira</li>
+      <li>Redução de erros manuais</li>
+      <li>Facilidade de acompanhamento mensal</li>
+      <li>Melhor controle de gastos</li>
+      <li>Otimização do tempo de registro</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div class="case">
+
+  <h3>Transformação completa do processo de aprovação de investimentos: da desorganização manual a um sistema automatizado e rastreável</h3>
+
+  <div class="case-block">
+    <h4>Desafio</h4>
+    <p>
+      O processo de aprovação de Projetos de Investimento era realizado em um sistema defasado, com fluxo lento e ineficiente. Qualquer reprovação reiniciava toda a aprovação do zero, gerando atrasos significativos.
+      <br><br>
+      O acompanhamento era feito em planilhas compartilhadas e desorganizadas, resultando em falta de rastreabilidade, erros humanos e baixa confiabilidade das informações.
+    </p>
+  </div>
+
+  <div class="case-block">
+    <h4>Solução</h4>
+    <p>
+      Realizei o mapeamento completo do processo e liderei a criação de um novo sistema junto a desenvolvedores terceiros, atuando tanto na gestão do projeto quanto na definição funcional e técnica. O sistema foi projetado para centralizar toda a jornada do Projeto de investimento, automatizar cálculos, estruturar fluxos de aprovação por alçada e garantir rastreabilidade em tempo real. A entrega para testes ocorreu 2 semanas, antes do prazo estimado.
+    </p>
+  </div>
+
+  <div class="case-block">
+    <h4>Resultados</h4>
+    <ul>
+      <li>Redução significativa do tempo de aprovação dos Projetos de investimentos</li>
+      <li>Eliminação de retrabalho causado por reprovações</li>
+      <li>Centralização total das informações em um único sistema</li>
+      <li>Aumento da rastreabilidade e confiabilidade dos dados</li>
+      <li>Automatização de cálculos e controles financeiros</li>
+      <li>Maior governança e transparência no processo decisório</li>
+    </ul>
+  </div>
+
+</div>
+
+</section>
+
+<section class="cta">
+  <h2>Vamos conversar sobre seu projeto?</h2>
+  
+  <p>
+    Se você precisa organizar processos, automatizar rotinas ou melhorar a eficiência operacional da sua empresa, posso te ajudar.
+  </p>
+
+  <p>
+    Vamos entender sua necessidade e encontrar a melhor solução de forma prática, clara e objetiva.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="mailto:thiagobiancato185@gmail.com" 
+   class="btn primary" 
+   role="button">
+   Enviar Email
+</a>
+
+    <a href="https://wa.me/5546991234569" target="_blank" class="btn secondary">
+      Falar no WhatsApp
+    </a>
+    
+    <a href="https://www.linkedin.com/in/thiago-biancato-026409253" target="_blank" class="btn secondary">
+      LinkedIn
+    </a>
+  </div>
+</section>
+
+
+<footer class="footer-pro">
+
+  <div class="footer-content">
+
+    <div>
+      <h4>Contato</h4>
+      <p>Email: thiagobiancato185@gmail.com</p>
+      <p>WhatsApp: (46) 99123-4569</p>
+    </div>
+
+    <div>
+      <h4>Networking</h4>
+      <p>
+        <a href="https://www.linkedin.com/in/thiago-biancato-026409253" target="_blank">
+          LinkedIn
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Especialidade</h4>
+      <p>Mapeamento de Processos</p>
+      <p>Automação Operacional</p>
+      <p>Gestão de Projetos</p>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 — Thiago Biancato
+  </p>
+
+</footer>
+
+
+</body>
+</html>
